@@ -1,0 +1,11 @@
+div{
+  background:red; color:#fff; font-size:20px; padding:10px;
+  margin-bottom:40px;
+}
+.box{border:solid 3px #000; font-size:30px;}
+.box .box{
+  all:unset;
+  /*  unset on border will behave like initial - becouse its un-inherit property
+      unset on font-size will nehave inherit - becouse it's inherit property
+  */
+}
