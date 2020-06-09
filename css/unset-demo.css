@@ -1,3 +1,30 @@
+.foo {
+  color: blue;
+}
+.bar {
+  color: green;
+}
+
+p {
+  color: red;
+}
+.bar p {
+  color: unset;
+}
+
+div {
+  border: 1px solid green;
+}
+
+p {
+  border: 1px solid red;
+}
+
+.bar p {
+  border-color: unset;
+}
+
+/* all */
 div{
   background:red; color:#fff; font-size:20px; padding:10px;
   margin-bottom:40px;
