@@ -1,38 +1,23 @@
-.foo {
-  color: blue;
-}
 .bar {
   color: green;
-}
-
-p {
-  color: red;
-}
-.bar p {
-  color: unset;
-}
-
-div {
-  border: 1px solid green;
-}
-
-p {
   border: 1px solid red;
 }
 
 .bar p {
-  border-color: unset;
+  color: unset;
+  border: inherit;
 }
+
 
 /* all */
 div{
-  background:red; color:#fff; font-size:20px; padding:10px;
+  background:gray; color:#fff; font-size:20px; padding:10px;
   margin-bottom:40px;
 }
 .box{border:solid 3px #000; font-size:30px;}
 .box .box{
   all:unset;
-  /*  unset on border will behave like initial - becouse its un-inherit property
-      unset on font-size will nehave inherit - becouse it's inherit property
+  /*  unset on border will behave like initial - because its un-inherit property
+      unset on font-size will nehave inherit - because it's inherit property
   */
 }
