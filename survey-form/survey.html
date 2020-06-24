@@ -9,42 +9,37 @@
       <title>Survey Form</title>
       <link rel="icon" href="../images/icons-monitor-48.ico" type="image/x-icon">
       <link rel="stylesheet" href="../css/survey.css">
+      <link rel="stylesheet" href="../css/normalize.css">
    </head>
    <body>
       <div class="survey-page">
         <h1 id="title">Survey Form</h1>
-        <div id="form-outer">
+        <div id="form-container">
            <p id="description">
               Let us know we can improve Free Code Camp!
            </p>
-           <form method="GET" action="https://crossorigin.me/https://freecodecamp.com">
-              <div class="rowTab">
-                 <label id="name-label" class="labels" for="name">* Name: </label>
-                 <div class="rightTab">
-                    <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your name" required> 
+           <form method="GET" >
+              <div class="formRow">
+                 <label id="name-label" class="label-cls" for="name">* Name: </label>
+                 <div class="input-col">
+                    <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your name" required>  
                  </div>
               </div>
-              <div class="rowTab">
-                 <div class="labels">
-                    <label id="email-label" for="email">* Email: </label>
-                 </div>
-                 <div class="rightTab">
+              <div class="formRow">
+                 <label id="email-label" class="label-cls" for="email">* Email: </label>
+                 <div class="input-col">
                     <input type="email" name="email" id="email" class="input-field" required placeholder="Enter your Email" >
                  </div>
               </div>
-              <div class="rowTab">
-                 <div class="labels">
-                    <label id="number-label" for="age">* Age: </label>
-                 </div>
-                 <div class="rightTab">
+              <div class="formRow">
+                 <label id="number-label" class="label-cls" for="age">* Age: </label>
+                 <div class="input-col">
                     <input type="number" name="age" id="number"  min="1" max="125" class="input-field" placeholder="Age" > 
                  </div>
               </div>
-              <div class="rowTab">
-                 <div class="labels">
-                    <label for="currentPos">Which option best describes your current role?</label>
-                 </div>
-                 <div class="rightTab">
+              <div class="formRow">
+                 <label for="currentPos" class="label-cls">Which option best describes your current role?</label>
+                 <div class="input-col">
                     <select id="currentPos" name="currentPos" class="dropdown">
                        <option disabled value>Select an option</option>
                        <option  value="student">Student</option>
@@ -55,23 +50,19 @@
                     </select>
                  </div>
               </div>
-              <div class="rowTab">
-                 <div class="labels">
-                    <label for="userRating">* How likely is that you would recommend FCC to a friend or colleague?  </label>
-                 </div>
-                 <div class="rightTab">
+              <div class="formRow">
+                 <label for="userRating" class="label-cls">* How likely is that you would recommend FCC to a friend or colleague?  </label>
+                 <div class="input-col">
                     <ul style="list-style: none;">
-                       <li class="radio"><label>Definitely<input name="rating" value="1"  type="radio" class="userRatings" ></label></li>
-                       <li class="radio"><label>May be<input name="rating" value="2"  type="radio" class="userRatings" ></label></li>
-                       <li class="radio"><label>Not sure<input name="rating" value="3"  type="radio" class="userRatings" ></label></li>
+                       <li class="radio"><label><input name="rating" value="1"  type="radio" class="userRatings" >Definitely</label></li>
+                       <li class="radio"><label><input name="rating" value="2"  type="radio" class="userRatings" >May be</label></li>
+                       <li class="radio"><label><input name="rating" value="3"  type="radio" class="userRatings" >Not sure</label></li>
                     </ul>
                  </div>
               </div>
-              <div class="rowTab">
-                 <div class="labels">
-                    <label for="most-like">What do you like most in FCC: </label>
-                 </div>
-                 <div class="rightTab">
+              <div class="formRow">
+                 <label for="most-like" class="label-cls">What do you like most in FCC: </label>
+                 <div class="input-col">
                     <select id="most-like" name="mostLike" class="dropdown">
                        <option disabled selected value>Select an option</option>
                        <option value="challenges">Challenges</option>
@@ -81,25 +72,20 @@
                     </select>
                  </div>
               </div>
-              <div class="rowTab">
-                 <div class="labels">
-                    <label for="preferences">Things that should be improved more in future<br>(Check all that implies): </label>
-                 </div>
-                 <div class="rightTab">
+              <div class="formRow">
+                 <label for="preferences" class="label-cls">Things that should be improved more in future<br>(Check all that implies): </label>
+                 <div class="input-col">
                     <ul id="preferences" style="list-style: none;">
                        <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">Front-end Projects</label></li>
                        <li class="checkbox"><label><input name="prefer" value="2" type="checkbox" class="userRatings">Back-end Projects</label></li>
                        <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRatings">Data Visualization</label></li>
-                       <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">Challenges</label></li>
                     </ul>
                  </div>
               </div>
-              <div class="rowTab">
-                 <div class="labels">
-                    <label for="comments">Any Comment or Suggestion</label>
-                 </div>
-                 <div class="rightTab">
-                    <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comment here..."></textarea> 
+              <div class="formRow">
+                 <label for="comments" class="label-cls">Any Comment or Suggestion</label>
+                 <div class="input-col">
+                    <textarea id="comments" class="input-field" name="comment" placeholder="Enter your comment here..."></textarea> 
                  </div>
               </div>
               <button id="submit" type="submit">Submit</button>
